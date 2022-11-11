@@ -1,5 +1,5 @@
 <div [formGroup]="parent">
-    <div formGroupName="selector">
+    <div formGroupName="selected">
         <select formControlName="product_id">
             <option value="">Select stock</option>
             <option *ngFor="let product of products" [value]="product.id">
@@ -9,7 +9,7 @@
 
         <input formControlName="quantity" type="number" step="10" min="10" max="1000" [value]=10>
 
-        <button type="button">
+        <button type="button" (click)="onAdd()">
             Add stock
         </button>
     </div>

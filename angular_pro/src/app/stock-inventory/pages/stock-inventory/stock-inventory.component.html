@@ -4,7 +4,7 @@
         <stock-branch [parent]="form">
         </stock-branch>
         
-        <stock-selector [parent]="form" [products]="products">
+        <stock-selector [parent]="form" [products]="products" (added)="addStock($event)">
         </stock-selector>
         
         <stock-products [parent]="form" >

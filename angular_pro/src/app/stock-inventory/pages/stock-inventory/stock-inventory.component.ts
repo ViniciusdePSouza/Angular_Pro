@@ -64,4 +64,9 @@ export class StockInventoryComponent {
    onSubmit() {
     console.log('Submit', this.form.value)
   }
+
+  addStock(stock: any){
+    const control = this.form.get('stock') as FormArray
+    control.push(this.createStock(stock.value))
+  }
 }
